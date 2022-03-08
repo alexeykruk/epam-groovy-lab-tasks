@@ -9,6 +9,8 @@ package groovylab
 
 class Task08 {
     public static String parseAndFilterJson(String input) {
-        throw UnsupportedOperationException('Not Implemented!')
+        def json = new groovy.json.JsonSlurper().parseText(input)
+        def value = json.findAll {it -> it.value % 9 == 0}
+        return new groovy.json.JsonBuilder(value).toString()
     }
 }

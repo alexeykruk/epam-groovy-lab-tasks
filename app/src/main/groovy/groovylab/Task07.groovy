@@ -13,6 +13,7 @@ package groovylab
 
 class Task07 {
     public static String encryptThis(String s) {
-        throw UnsupportedOperationException('Not Implemented!')
+      return s.split(" ")[0][0].getBytes('US-ASCII').join('')+s.split(" ")[0][-1,2..-2,1] + ' ' +
+              s.split(" ")[1][0].getBytes('US-ASCII').join('')+s.split(" ")[1][-1,2..-2,1]
     }
 }
